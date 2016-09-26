@@ -1,0 +1,64 @@
+<!-- Bread and Roses volunteer page
+include photo of volunteer group
+enter your info for confirmation email
+choose date to volunteer
+eventually - add action javascript to send email confirmation
+<div class="navlink" id="nav2"><a href="BRAboutUs.html" class="ro"><img src="BRAboutUsButton.png" border="0" alt="About Us" height="30" width="60"/></a></div>
+<div class="navlink" id="nav5"><a href="BRNewsEvents.html" class="ro"><img src="BRNewsEventsButton.png" border="0" alt="News Events" height="30" width="60"/></a></div>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bread & Roses HTML only VOLUNTEER page</title>
+    </head>
+    <body>
+         <header> 
+        <div id="navbar">
+        <div id="navbarlt">
+            <div class="navlink" id="nav1"><a href="index.html"><img src="BRHomeButton.png" border="0" alt="Home" height="30" width="60"/></a></div>
+            <div class="navlink" id="nav3"><a href="BRDonate.html" class="ro"><img src="BRDonateButton.png" border="0" alt="Donate" height="30" width="60"/></a></div>
+            <div class="navlink" id="nav4"><a href="BRVolunteer.html" class="ro"><img src="BRVolunteerButton.png" border="0" alt="Volunteer" height="30" width="60"/></a></div>    
+        </div>
+        </header>
+        <h1> BREAD & ROSES Soup Kitchen </h1>
+        <!--
+            <img src="BRVolunteerGroup.jpg" alt="Group of Volunteers">
+        -->
+        <p>
+
+        Bread & Roses's purpose is to ease the hunger of those in need. 
+        We serve a full-course, nutritious dinner five nights per week.  
+        Everyone is welcome.  There are no questions asked, no forms to fill out and no charge for the meal.
+        An average of 200 meals are served to homeless or needy families and individuals each evening.
+        <p><b>You</b> can volunteer: 
+
+        <div class="volunteerwork">
+        <h3>Cook</h3>
+        Buy, prep and cook meals.
+        </div>
+
+        <div class="volunteerwork">
+        <h3>Server</h3>
+        Serve meals to our guests who will be seated at a dining table.
+        </div>
+
+        <div class="volunteerwork">
+        <h3>Greeter</h3>
+        Welcome our guests at the door.
+        </div>
+        <p>
+        <h2>Want to <b>volunteer</b> with us?</h2>
+        <form method="GET" action="formProcess.html">
+            First Name: <input type="text" name="volunteerfirstname">
+            <br>Last Name: <input type="text" name="volunteerlastname">
+            <br>E-mail: <input type="email" name="volunteeremail" required>
+            <br>Choose your volunteer date:
+            <br><input type="date" id="entervolunteerdate" name="volunteerdate">
+            <br><input type="submit">
+        </form>
+
+        <footer> </footer>
+    </body>
+</html>

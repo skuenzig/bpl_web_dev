@@ -1,0 +1,67 @@
+<!-- Bread & Roses Donate Page
+include - list of acceptable donations
+place to enter information
+choose color tshirt
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bread & Roses HTML only DONATE page</title>
+    </head>
+    <body>
+         <header> 
+        <div id="navbar">
+        <div id="navbarlt">
+            <div class="navlink" id="nav1"><a href="index.html"><img src="BRHomeButton.png" border="0" alt="Home" height="30" width="60"/></a></div>
+            <div class="navlink" id="nav3"><a href="BRDonate.html" class="ro"><img src="BRDonateButton.png" border="0" alt="Donate" height="30" width="60"/></a></div>
+            <div class="navlink" id="nav4"><a href="BRVolunteer.html" class="ro"><img src="BRVolunteerButton.png" border="0" alt="Volunteer" height="30" width="60"/></a></div>    
+        </div>
+        </header>
+        <h1> BREAD & ROSES Soup Kitchen </h1>
+        <div>
+        <h2>We accept the following donations:</h2>
+        <ul>
+            <li>can and dry goods</li>
+            <li>fresh produce</li>
+            <li>etc.</li>
+        </ul>
+        <p> If you would prefer to donate money, 
+        enter your information and we will contact you shortly.
+        <!-- input form with submit button -->
+        <form method="GET" action="formProcess.html">
+            <input type="text" id="donorfirstname" name="donorfirstname" value="Enter your first name">
+            <input type="text"" id="donorlastname" name="donorlastname" value="Enter your last name">
+            <input type="email"" id="donoremail" value="Enter your email" name="donoremail" required>
+    
+            <p>To thank you for your donation, let us know your size and favorite color.
+            <br>We will have your t-shirt ready for you when you drop by with your donation.
+            <br>Thank you!
+            <!-- choose color of your tshirt -->
+            <p>Select your t-shirt color:
+            <input type="color" id="tshirtcolor" name="tshirtcolor" value="#FF0000"" oninput="tshirtcolorOutputId.value = tshirtcolor.value"></p>
+            
+            <!-- choose size of your t-shirt -->
+            <p>Select your t-shirt size:<br>
+            <input type="radio" id="tshirtsizesmall" name="tshirtsize" value="small" oninput="tshirtsizeOutputId.value = tshirtsize.value">Small<br>
+            <input type="radio" id="tshirtsizemedium" name="tshirtsize" value="medium" oninput="tshirtsizeOutputId.value = tshirtsize.value">Medium<br>
+            <input type="radio" id="tshirtsizelarge" name="tshirtsize" value="large" checked oninput="tshirtsizeOutputId.value = tshirtsize.value">Large<br>
+            <input type="radio" id="tshirtsizexlarge" name="tshirtsize" value="xlarge" oninput="tshirtsizeOutputId.value = tshirtsize.value">X-Large<br></p>
+            
+            
+            <p>T-shirt color: 
+                <output id="tshirtcolorOutputId" name=tshirtcolorOutput">#FF0000</output><br>
+
+                <!-- I thought the following line would dynamically change the color of the font
+                <font color="tshirtcolorOutputId.value" </font>You chose this color. 
+                -->
+            <br>T-shirt size: 
+            <p>Can we get the value of the radio button in HTML? google search says I need to use javascript </p>
+                <output id="tshirtsizeOutputId" name="tshirtsizeOutput">Large</output>
+
+            <p><input type="submit">
+
+        </form>
+        <footer> </footer>
+    </body>
+</html>

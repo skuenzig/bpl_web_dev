@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>An excellent form</title>
+	</head>
+	<body>
+		<form method="GET" action="formReceiver.html">
+		<button>asdfasdf</button>
+			<input type="text" name="name" value="Your name">
+			<p>
+			<input type="email">
+			<p>
+			<textarea name="about">Tell us about yourself</textarea>
+			<p>
+ 			<input type="color" id="color" value="#ff0000" oninput="colorOutput.value = color.value"/>
+			
+
+			<output name="colorOutput" id="colorOutput">#ff0000</output>
+			<p>
+
+			<input type="checkbox" name="spam"> Check this if you want us to spam you
+			<p>
+			<input type="radio" name="gender" value="male"> Male<br>
+			<input type="radio" name="gender" value="female"> Female<br>
+			<input type="radio" name="gender" value="none"> None<br>
+			<input type="radio" name="gender" value="both"> Both<br>
+			<input type="radio" name="gender" value="all"> All<br>
+			<p>
+			Age: 
+			<input type="range" name="age" id="ageId" min="9" max="10" step=".01" oninput="ageOutputId.value = ageId.value"/>
+
+			<output name="ageOutput" id="ageOutputId">50</output>
+
+			<p>
+			Pick a date: <input type="date" name="date" value="1988-09-08">
+			<p>
+			Pick a time: <input type="time" name="time">
+			
+			<p>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+
+</html>
