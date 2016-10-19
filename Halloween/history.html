@@ -4,117 +4,56 @@
         <meta charset="utf-8">
         <title>Halloween History</title>
 	<!-- Halloween website to take advantage of all css elements -->
-<!--
 	<link href="halloween.css" rel="stylesheet" type="text/css"></link>
--->
-
-<style>
-a:hover {
-background-color:black;
-color:white;
-}
-
-#spiderweb {
- background-image: spiderweb.jpg; 
-}
-
-#spider {
-    float: right; 
-    -webkit-animation: myspidermove 5s infinite; /* Chrome, Safari, Opera */
-    animation-name: myspidermove 
-    animation-duration: 5s;
-    animation-delay:2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-
-
-/* The animaton code */
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myspidermove {
-    50% {-webkit-transform: rotate(10deg);}
-}
-
-/* Standard syntax */
-@keyframes myspidermove {
-     0%  {transform: rotate(5deg);
-	  top: 0;
-	}
-    50%  {transform: rotate(-5deg);}
-	   top: 33%;
-	}
-    75%  {transform: rotate(5deg);	  
-	 top: 66%;
-	}
-    100% {transform: rotate(-5deg);
-	   top: 0;
-	}
-}
-
-@keyframes fadeOut {
-     from {
-	opacity: 1;
-}
-     to {
-opacity: 0;}
-}
-
-img:hover {
-    animation-name: fadeOut;
-}
-
-</style>
     </head>
 
 
     <body id="top">
         <header>
 		<nav>
-			<a href="index.html">Home</a>
-			<a href="history.html">History</a>
-			<a href="shop.html">Shop</a>
+			<ul id="navi">
+				<li><a class="navigation" id="menuhomeheader" href="index.html">Home</a></li>
+				<li><a class="navigation" id="menuhistoryheader" href="history.html">History</a></li>
+				<li><a class="navigation" id="menushopheader" href="shop.html">Shop</a></li>
+				<li style="float:right"><a class="navigation" id="menuaboutpheader" href="about.html"> About </a></li>
+			</ul>
 			
 		</nav>
         </header>
 
-<div id="spiderweb">
-<img src="spiderweb.jpg" alt="spiderweb">
+	<div id="spiderweb">
+	.
+	</div>
 
-</div>
 
         <h1>Halloween</h1>
         
-        <p>Halloween, or Hallowe'en (a contraction of All Hallows’ Evening), also known as Allhalloween, All Hallows' Eve, or All Saints' Eve, is a celebration observed in a number of countries on 31 October, the eve of the Western Christian feast of All Hallows' Day. It begins the three-day observance of Allhallowtide, the time in the liturgical year dedicated to remembering the dead, including saints (hallows), martyrs, and all the faithful departed. </p>
-
+        <p>Halloween is celebrated on October 31st, the eve of the Western Christian feast of All Hallows' Day. It begins the 3 day observance of Allhallowtide, the time dedicated to remembering the dead, including saints (hallows), martyrs, and all the faithful departed. </p>
         <p>Halloween activities include trick-or-treating (or the related guising), attending Halloween costume parties, decorating, carving pumpkins into jack-o'-lanterns, lighting bonfires, apple bobbing and divination games, playing pranks, visiting haunted attractions, telling scary stories and watching 
-        <a href="http://www.hitfix.com/news/horror-poll">horror films</a>. In many parts of the world, the Christian religious observances of All Hallows' Eve, including attending church services and lighting candles on the graves of the dead, remain popular, although elsewhere it is a more commercial and secular celebration. Some Christians historically abstained from meat on All Hallows' Eve, a tradition reflected in the eating of certain foods on this vigil day, including apples, potato pancakes and soul cakes. </p>
+       		 <a href="http://www.hitfix.com/news/horror-poll" target=_blank>horror films</a>
+ 	</p>
         
-
+	<div id="spider"><img src="spider.jpg" alt="spider animation" width="75px" height="100px">
+	</div>
 	<h2>Cats & Halloween</h2>
-<p>Superstition, prejudice, bringer of good or bad luck
-The folklore surrounding black cats varies from culture to culture. 
-The Scots believe that a strange black cat's arrival to the home signifies prosperity. 
-In Celtic mythology, a fairy known as the Cat Sìth takes the form of a black cat. 
-Black cats are also considered good luck in the rest of Britain and Japan.
- Furthermore, it is believed that a lady who owns a black cat will have many suitors.
-<br> 
-However, in Western history, black cats have often been looked upon as a symbol of evil omens,
-specifically being suspected of being the familiars of witches, 
-and so most of Europe considers the black cat a symbol of bad luck,
- especially if one crosses paths with a person, which is believed to be an omen of misfortune and death.
- In Germany, some believe that black cats crossing a person's path from right to left, is a bad omen.
- But from left to right, the cat is granting favorable times. In the United Kingdom it is commonly 
-considered that a black cat crossing a person's path is a good omen.
-</p>
+	<p>Superstition, prejudice, bringer of good or bad luck. 
+	In Western history, black cats have often been looked upon as a symbol of evil omens, specifically being suspected of being the familiars of witches, and therefore a symbol of bad luck.
+	</p>
 
+	But there are some famous cats that are know no witches including:
+	<ul>
+		<li>Felix the Cat</li>
+		<li>Snowball II from The Simpsons</li>
+		<li>The Cat from The Cat In The Hat</li>
+	</ul>
 
-<div id="spider"><img src="spider.jpg" alt="spider animation" width="75px" height="100px">
-</div>
+	And there are many other <a href="http://pawesomecats.com/2013/10/29/famous-black-cats/">famous black cats.</a>
 
   	 <footer id="contactinfo">
-Want to sell your soul? Contact us at: devil@666halloween.com 666 Pulgatory Avenue, Hell 	666-666-6666
-
+		<small>&copy; JSK Arts</small><br>
+		<small>Want to sell your soul? Contact us at: 
+		<a href="mailto:devil@666halloween.com?subject=One soul for sale&body=I want to know how much I can get for my soul">devil@666halloween.com</a>
+		666 Pulgatory Avenue, Hell 	666-666-6666</small>
         </footer>
     </body>
 </html>

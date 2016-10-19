@@ -1,9 +1,142 @@
 ﻿/* Halloween style sheet */
-
 <style>
-  a:hover {
-	background-color:yellow;
-	}
+header {
+	background-color: black;
+	color; white;
 }
 
+#navi {
+    list-style-type: none;
+    margin: 1px;
+    padding: 2px;
+    width: 100%;
+    background-color: black;
+    position: fixed; /* Make it stick, even on scroll */
+}
+
+
+#navi li a {
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+#navi li a:hover {
+    background-color: orange;
+    color: black;
+}
+
+#navi li {
+     display: inline; /* horizontal navigation bar */
+     border-right: 1px solid white;
+}
+
+#navi li:last-child {
+     border-right: none;
+}
+
+section {
+	background:orange;
+	background:linear-gradient(orange,black);
+	border: 4px solid black;
+	width: 100%;
+	height: 500px;
+	color: black;	
+}
+
+#entertext {
+  text-align: center;
+  width: 40%;
+  height: 45%;
+	}
+
+
+#enter {
+	text-decoration: none;
+}
+
+.radiobutton {
+   border: 10px solid black;
+   display:inline-block;
+   cursor:pointer;
+}
+
+.shirt {
+    border: 10px solid orange;
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:180px;
+    height:180px;
+    padding: 10px;
+
+}
+
+.felixcat{background-image:url(cat1.jpg);}
+.garfieldcat{background-image:url(cat2.jpg);}
+.kittycat{background-image:url(cat3.jpg);}
+
+
+img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#spiderweb {
+ background: url("spiderweb.jpg") repeat;
+ height: 80px;
+}
+
+#spider {
+    float: right; 
+    position: relative;
+    -webkit-animation: myspidermove 3s infinite; /* Chrome, Safari, Opera */
+    animation-name: myspidermove;
+    animation-duration: 3s;
+    animation-delay:1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+/* The spider animaton code */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myspidermove {
+    50% {-webkit-transform: rotate(5deg);}
+}
+
+/* Standard syntax */
+@keyframes myspidermove {
+     0%  {transform: rotate(5deg);
+	  top: 50px;
+	}
+    50%  {transform: rotate(-5deg);}
+	  top: 100px;
+	}
+    75%  {transform: rotate(5deg);	  
+	  top: 150px;
+	}
+    100% {transform: rotate(-5deg);
+	  top: 50px;
+	}
+
+}
+
+img:hover {
+    opacity: 0;
+
+}
+
+footer {
+	background-color: black;
+	color: white;
+}
+
+footer a {
+	color: orange;
+}
 </style> 
