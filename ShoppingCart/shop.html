@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shop</title>
+	<link href="halloween.css" rel="stylesheet" type="text/css"></link>
+
+<style>
+
+</style>
+    </head>
+    <body id="top">
+        <header>
+		<nav>
+			<ul id="navi">
+				<li><a class="navigation" id="menuhomeheader" href="index.html">Home</a></li>
+				<li><a class="navigation" id="menuhistoryheader" href="history.html">History</a></li>
+				<li><a class="navigation" id="menushopheader" href="shop.html">Shop</a></li>
+				<li style="float:right"><a class="navigation" id="menuaboutpheader" href="about.html"> About </a></li>
+			</ul>
+			
+		</nav>
+        </header>
+
+
+	<br>    <!-- Added here because the Shop would be behind the menu - why? float? -->
+        <h1>Love black cats?</h1>
+
+<section id="shopcart">
+
+
+<!-- Choose design -->
+Choose a T-shirt design:<br>
+    <div class="tshirt-selector">
+<div class="radiobutton">
+        <input id="felixcat" type="radio" name="shirt-design" value="felixcat">
+
+        <label class="shirt felixcat" for="felixcat"></label>
+</div>
+<div class="radiobutton">
+        <input id="garfieldcat" type="radio" name="shirt-design" value="garfieldcat" selected>
+        <label class="shirt garfieldcat"for="garfieldcat"></label>
+</div>
+<div class="radiobutton">
+        <input id="kittycat" type="radio" name="shirt-design" value="kittycat">
+        <label class="shirt kittycat"for="kittycat"></label>
+</div>
+</div>
+
+
+<!-- Choose size -->
+<form>
+Choose T-shirt size:<br>
+<select required value="L">
+   <option value="XS">X-Small</option>
+   <option value="S">Small</option>
+   <option value="L">Large</option>
+   <option value="XL">X-Large</option>
+   <option value="xXL">XX-Large</option>
+</select >
+</form>
+
+
+<form>
+Enter your shipping address:<br>
+<input type="text" name="shipfirstname" value="Firt Name"><br>
+<input type="text" name="shiplastname" value="Last Name"><br>
+<input type="text" name="shipstreetaddr" value="Address"><br>
+<input type="text" name="shipcity" value="City"><br>
+<input type="text" name="shipstate" value="State"><br>
+<input type="text" name="shipzipciode" value="Zipcode"><br>
+<input type="submit" id="submitbutton" name="submitorder" value="Submit">
+</form>
+</section>
+  	 <footer id="contactinfo">
+		<small>&copy; JSK Arts</small><br>
+		<small>Want to sell your soul? Contact us at: 
+		<a href="mailto:devil@666halloween.com?subject=One soul for sale&body=I want to know how much I can get for my soul">devil@666halloween.com</a>
+		666 Pulgatory Avenue, Hell 	666-666-6666</small>
+        </footer>
+</div>
+    </body>
+</html>

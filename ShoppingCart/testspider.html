@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+<style>
+#container {
+	border: 5px solid black;
+	width: 500px;
+	height: 500px;
+}
+
+
+
+#spider {
+    border:5px solid orange;
+    position: relative;
+    float: right; 
+    -webkit-animation: myspidermove 5s infinite; /* Chrome, Safari, Opera */
+    animation-name: myspidermove;
+    animation-duration: 5s;
+    animation-delay:2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+/* The spider animaton code */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myspidermove {
+    50% {-webkit-transform: rotate(5deg);}
+}
+
+/* Standard syntax */
+@keyframes myspidermove {
+     0%  {transform: rotate(5deg);
+	  top: 50px;
+	}
+    50%  {transform: rotate(-5deg);}
+	  top: 100px;
+	}
+    75%  {transform: rotate(5deg);	  
+	  top: 150px;
+	}
+    100% {transform: rotate(-5deg);
+	  top: 50px;
+	}
+
+}
+
+
+</style>
+    </head>
+    <body>
+
+<div id="container">  
+ 	<div id="spider"><img src="spider.jpg" alt="spider animation" width="75px" height="100px">
+	</div>
+</div>
+
+        </footer>
+    </body>
+</html>

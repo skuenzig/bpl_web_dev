@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+
+/*1, 1, 2, 3, 5, 8, 13, 21, 34*/
+
+	function fibonacci(fib1, fib2, count) {
+		if(count > 100) {
+			return;
+		}
+		var nextFib = fib1 + 2*fib2;
+		document.write("<br>  "+count+": "+nextFib);
+		fib1 = fib2;
+		fib2 = nextFib;
+
+		fibonacci(fib1, fib2, count+1);
+
+	}
+	document.write("<br>"+1);
+	document.write("<br>"+1);
+	fibonacci(1,1,0);
+</script>
+</head>
+<body>
+
+</body>
+</head>
