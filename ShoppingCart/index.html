@@ -2,36 +2,114 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Halloween</title>
-	<link href="halloween.css" rel="stylesheet" type="text/css"></link>
-   </head>
+        <title>Shop</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link href="shoppingcart.css" rel="stylesheet" type="text/css"></link>
 
+<style>
+
+</style>
+    </head>
     <body id="top">
         <header>
 		<nav>
 			<ul id="navi">
 				<li><a class="navigation" id="menuhomeheader" href="index.html">Home</a></li>
-				<li><a class="navigation" id="menuhistoryheader" href="history.html">History</a></li>
-				<li><a class="navigation" id="menushopheader" href="shop.html">Shop</a></li>
-				<li style="float:right"><a class="navigation" id="menuaboutpheader" href="about.html"> About </a></li>
 			</ul>
 			
 		</nav>
         </header>
+
+
+	<br>    <!-- Added here because the Shop would be behind the menu - why? float? -->
+        <h1>Love?</h1>
+
+<section id="shopcart">
+
+
+<!-- Choose design 
+label class 
+-->
+Choose a T-shirt design:<br>
+    <div class="tshirt-selector">
+	<div class="radiobutton">
+        <input id="felixcat" type="radio" name="shirt-design" value="felixcat">
+
+        <label class="shirt felixcat" for="felixcat"></label>
+	</div>
+	<div class="radiobutton">
+       		 <input id="garfieldcat" type="radio" name="shirt-design" value="garfieldcat" selected>
+        	<label class="shirt garfieldcat" for="garfieldcat"></label>
+	</div>
+
+
+
+Choose T-Shirt color: <>
+	<div class="tshirt-color">
 	
-	<a id="enter" href="history.html" display="block">
-		<section>
-			<div id="entertext">
-				<h1>Enter if you dare!</h1>
-			</div>
-		</section>
-	</a>
-        
+
+
+
+
+<!-- Choose size -->
+<form>
+Choose T-shirt size:<br>
+<select id="shirtsize" required value="L">
+   <option value="S">Small</option>
+   <option value="L">Large</option>
+   <option value="XL">X-Large</option>
+</select >
+</form>
+
+
+<form>
+Enter your shipping address:<br>
+<input id="shipfirstname"  type="text"   name="shipfirstname"  value="Firt Name"><br>
+<input id="shiplastname"   type="text"   name="shiplastname"   value="Last Name"><br>
+<input id="shipstreetaddr" type="text"   name="shipstreetaddr" value="Address"><br>
+<input id="shipcitytype"   type="text"   name="shipcity"       value="City"><br>
+<input id="shipstate"      type="text"   name="shipstate"      value="State"><br>
+<input id="shipzipcode"    type="text"   name="shipzipcode"   value="Zipcode"><br>
+<input id="submitbutton"   type="submit" name="submitorder" value="Submit">
+</form>
+</section>
+
+<!-- Get & Display the values of the form -->
+<script>
+var shirtdesign == $('.shirt-design:checked').val();
+var shirtsize == $("select.shirtsize option:selected").val();
+var shipfirstname == $("#shipfirstname").text();
+var shiplastname == $("#shiplastname").text();
+var shipstreetaddr == $("#shipstreetaddr").text();
+var shipcitytype == $("#shipcitytype").text();
+var shipstate == $("#shipstate").text();
+
+<!-- On change, validate the values entered - zipcode, minimum entered fields, minimum # characters to the names, validation of email format etc
+-->
+var shipzipcode == $("#shipzipcode").text();
+
+
+/* This will turn the background color of the tshirt to be the chosen color under the design */
+
+$(document).ready(function(){
+   $(".shirt-design").on({
+	mouseenter: function(){
+	$(this).css("background-color",<chosencolor>);
+	},
+	click: function() {
+	$(this).css("background-color",<setChosencolor>);
+	}
+	});
+</script>
+
+
+
   	 <footer id="contactinfo">
 		<small>&copy; JSK Arts</small><br>
-		<small>Want to sell your soul? Contact us at: 
-		<a href="mailto:devil@666halloween.com?subject=One soul for sale&body=I want to know how much I can get for my soul">devil@666halloween.com</a>
-		666 Pulgatory Avenue, Hell 	666-666-6666</small>
+		<small>Naughty or Nice? Contact us at: 
+		<a href="mailto:santa@northpole.com?subject=Naughty or Nice&body=I want to know how I can migrate from one list to another?">santa@northpole.com</a>
+		North Pole</small>
         </footer>
+</div>
     </body>
 </html>
