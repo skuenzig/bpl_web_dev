@@ -11,6 +11,9 @@
 </style>
     </head>
     <body id="top">
+
+
+<!--
         <header>
 		<nav>
 			<ul id="navi">
@@ -61,24 +64,38 @@ Choose T-shirt size:<br>
 </select >
 </form>
 
+..>
 
 <form>
 Enter your shipping address:<br>
 <input id="shipfirstname"  type="text"   name="shipfirstname"  value="Firt Name"><br>
+
+<!--
+
 <input id="shiplastname"   type="text"   name="shiplastname"   value="Last Name"><br>
 <input id="shipstreetaddr" type="text"   name="shipstreetaddr" value="Address"><br>
 <input id="shipcitytype"   type="text"   name="shipcity"       value="City"><br>
 <input id="shipstate"      type="text"   name="shipstate"      value="State"><br>
 <input id="shipzipcode"    type="text"   name="shipzipcode"   value="Zipcode"><br>
+
+-->
+
 <input id="submitbutton"   type="submit" name="submitorder" value="Submit">
+
 </form>
 </section>
 
 <!-- Get & Display the values of the form -->
 <script>
+
+
+/*
 var shirtdesign == $('.shirt-design:checked').val();
 var shirtsize == $("select.shirtsize option:selected").val();
+*/
+
 var shipfirstname == $("#shipfirstname").text();
+/*
 var shiplastname == $("#shiplastname").text();
 var shipstreetaddr == $("#shipstreetaddr").text();
 var shipcitytype == $("#shipcitytype").text();
@@ -103,6 +120,14 @@ $(document).ready(function(){
 </script>
 
 
+	$(document).ready(function(){
+		$("
+
+*/
+alert("First Name is " + shipfirstname);
+
+
+<!--
 
   	 <footer id="contactinfo">
 		<small>&copy; JSK Arts</small><br>
@@ -110,6 +135,7 @@ $(document).ready(function(){
 		<a href="mailto:santa@northpole.com?subject=Naughty or Nice&body=I want to know how I can migrate from one list to another?">santa@northpole.com</a>
 		North Pole</small>
         </footer>
+-->
 </div>
     </body>
 </html>
