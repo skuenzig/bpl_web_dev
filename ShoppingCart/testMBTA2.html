@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+	<body>
+	3MBTA api
+		<script>
+		var queryUrl = "http://realtime.mbta.com/developer/api/v2/stopsbylocation?api_key=wX9NwuHnZU2ToO7GmGR9uw&lat=42.346961&lon=-71.076640&format=json"
+		$.ajax({
+			url: queryUrl, 
+			success: function(data) {
+			$.each(data['stop'], function(key,value){
+				console.log("the "+key+"th element of the arrys is: "+value['stop_name']);
+			});
+			}
+		});
+
+        $.ajax({
+        url:queryUrl,
+        success:function(data) {
+            $.each(data['stop'], function(key,value){
+                console.log("The "+key+"th element of the SECOND array is: "+value['stop_name']);
+                });
+                }
+                });
+		
+		</script>
+	</body>
+</html>

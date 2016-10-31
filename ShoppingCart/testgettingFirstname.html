@@ -7,25 +7,25 @@
     <body id="top">
 
 
-<form>
-Enter your shipping address:<br>
+	<form>
+		Enter your shipping address:<br>
+		<input id="shipfirstname"  type="text"   name="shipfirstname"  value="3First Name"><br>
+		<input id="submitbutton"   type="submit" name="submitorder" value="Submit">
 
+		<div id="customername">
+		</div>
+	</form>
 
-<input id="shipfirstname"  type="text"   name="shipfirstname"  value="2First Name"><br>
-<input id="submitbutton"   type="submit" name="submitorder" value="Submit">
-
-</form>
-
-<!-- Get & Display the values of the form -->
-<script>
-
-$("#submitbutton").click (
+	<!-- Get & Display the values of the form -->
+	<script>
+		$("#submitbutton").click (
 				function () {
-				alert($("#shipfirstname".val());
-				}
+				var custfirstname = $("#shipfirstname".val());
+				console.log(custfistname + "<br>"); 
+				$("#customername").append(custfistname + "<br>");
+					}
 			);
-
-</script>
+	</script>
 
     </body>
 </html>

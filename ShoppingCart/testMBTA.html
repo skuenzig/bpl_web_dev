@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+	<h1>Some MBTA stops</h1>
+
+	<div id="stops"> 
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+		var queryUrl = "http://realtime.mbta.com/developer/api/v2/stopsbylocation?api_key=wX9NwuHnZU2ToO7GmGR9uw&lat=42.346961&lon=-71.076640&format=json"
+		$.ajax({
+			url: queryUrl, 
+			success: function(data) {
+			$.each(data['stop'], function(key,value){
+				$("#stops").append("the "+key+"th element of the array is: "+value['stop_name']+"<br>");
+			});
+			}
+		});
+		
+		</script>
+
+	</body>
+</html>
