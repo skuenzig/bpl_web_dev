@@ -9,21 +9,21 @@
 
 <form>
 Enter your shipping address:<br>
-<input id="shipfirstname"  type="text"   name="shipfirstname"  value="Firt Name"><br>
+
+
+<input id="shipfirstname"  type="text"   name="shipfirstname"  value="2First Name"><br>
 <input id="submitbutton"   type="submit" name="submitorder" value="Submit">
 
 </form>
 
 <!-- Get & Display the values of the form -->
 <script>
-alert($("#shipfirstname").text());
 
 $("#submitbutton").click (
 				function () {
-				alert("Just clicked on the Submit button and here is the First name " + shipfirstname);
+				alert($("#shipfirstname".val());
 				}
 			);
-
 
 </script>
 
