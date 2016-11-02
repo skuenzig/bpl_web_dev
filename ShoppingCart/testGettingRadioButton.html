@@ -23,7 +23,7 @@
 
 
 		<!-- Choose design  -->
-		Vote for your tshirt:<br>
+		Choose a T-shirt design:<br>
   		<div class="tshirt-selector">
 		<div class="radiobutton">
         		<input id="felixcat" type="radio" name="shirt-design" value="felixcat">
@@ -33,6 +33,10 @@
        			<input id="garfieldcat" type="radio" name="shirt-design" value="garfieldcat" selected>
         		<label class="shirt garfieldcat" for="garfieldcat"></label>
 		</div>
+
+
+		Choose T-Shirt color: 
+		<div class="tshirt-color">
 
 		<!-- Choose size -->
 		<form>
@@ -45,9 +49,12 @@
 		</form>
 
 		<form>
-			Enter your name / email :<br>
-			<input id="custname"     type="text"   name="custname"  value="Name"><br>
-			<input id="custemail" type="text" name="custemail" value="Email"><br>
+			Enter your shipping address:<br>
+			<input id="shipname"     type="text"   name="shipname"  value="Name"><br>
+			<input id="shipstreetaddr" type="text" name="shipstreetaddr" value="Address"><br>
+			<input id="shipcity"     type="text"   name="shipcity"       value="City"><br>
+			<input id="shipstate"    type="text"   name="shipstate"      value="State"><br>
+			<input id="shipzip"      type="text"   name="shipzip"   value="Zipcode"><br>
 			<input id="submitbutton" type="submit" name="submitorder" value="Submit">
 		</form>
 	</section>
@@ -59,47 +66,18 @@
 		minimum # characters to the names, 
 		validation of email format etc 
 		This will turn the background color of the tshirt to be the chosen color under the design
-
-
-		$(".image-radio img").click(function(){
-     $(this).prev().attr('checked',true);
- })
- 
     */
 
     $(document).ready(function() {
  	     $(".radiobutton").on({
-
-			  /*
 	    	mouseenter: function(){
 	    	    $(this).css("background-color","red");
 	    	},
             mouseleave: function(){
                 $(this).css("background-color","black");
             },
-			*/
 	    	click: function() {
- 			 	$(this).animate({
-					  left: '500px',
-					  opacity: '0.5',
-					  height: '280px',
-					  width: '280px'
-					});
-
-				$(this).css("background-image","url('cat3.jpg')");
-				alert("After the animate and the change of the image");
-/*
-				if ($(this).css("background-color") == "green")
-				   {
-					alert("The color is Green. Set it to black");
-					$(this).css("background-color","black");
-				   }
-				else {
-					 var colorbackground = $(this).css("background-color");
-					 alert("Not Green. It is "+colorbackground+ " - set it to Green");
-					$(this).css("background-color","green"); 
-					}
-					*/
+	    	    $(this).css("background-color","green");
 	    	}
 		});
 	});
@@ -112,18 +90,25 @@
 
 		/* Chosen T-design - cycle thru the radio buttons */
 		var tdesign = "Felix";   /* default value to Felix */
+        
+		/* Chosen T-Shirt Color */
+		var tcolor = "RED"; /* default value to Red */
 
 		/* Chosen T-shirt Size - dropdown select */
 		var tsize = $("#shirtsize").val();
 
 		/* Get shipping address - input fields */
-		var custname = $("#custname").val();
-		var custemail = $("#custemail").val();
+		var sname = $("#shipname").val();
+		var sstreetaddr = $("#shipstreetaddr").val();
+		var scity 	= $("#shipcity").val();
+		var sstate = $("#shipstate").val();
+		var szip = $("#shipzip").val();
 
 		alert(
-		"Design: "+tdesign+"<br>"+	
+		"Design: "+tdesign+"<br>"+
+		"Color: "+tcolor+"<br>"+	
 		"Size: "+tsize+"<br>"+
-		"Name: "+ custname + " Email: "+custemail);
+		"Name: "+ sname + " Address: "+sstreetaddr+ " "+scity+" "+sstate+" "+szip);
 	});
 });
 </script>
