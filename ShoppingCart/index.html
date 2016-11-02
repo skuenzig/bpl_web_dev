@@ -1,17 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Shop</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<link href="shoppingcart.css" rel="stylesheet" type="text/css"></link>
-
-<style>
-
-</style>
     </head>
     <body id="top">
-
 
 <!--
         <header>
@@ -22,113 +17,98 @@
 			
 		</nav>
         </header>
+	<br>    <!-- Added here because the Shop would be behind the menu - why? float?  -->
+
+	<section id="shopcart">
 
 
-	<br>    <!-- Added here because the Shop would be behind the menu - why? float? -->
-        <h1>Love?</h1>
-
-<section id="shopcart">
-
-
-<!-- Choose design 
-label class 
--->
-Choose a T-shirt design:<br>
-    <div class="tshirt-selector">
-	<div class="radiobutton">
-        <input id="felixcat" type="radio" name="shirt-design" value="felixcat">
-
-        <label class="shirt felixcat" for="felixcat"></label>
-	</div>
-	<div class="radiobutton">
-       		 <input id="garfieldcat" type="radio" name="shirt-design" value="garfieldcat" selected>
-        	<label class="shirt garfieldcat" for="garfieldcat"></label>
-	</div>
+		<!-- Choose design  -->
+		Choose a T-shirt design:<br>
+  		<div class="tshirt-selector">
+		<div class="radiobutton">
+        		<input id="felixcat" type="radio" name="shirtdesign" value="felixcat">
+        		<label class="shirt felixcat" for="felixcat"></label>
+		</div>
+		<div class="radiobutton">
+       			<input id="garfieldcat" type="radio" name="shirtdesign" value="garfieldcat" selected>
+        		<label class="shirt garfieldcat" for="garfieldcat"></label>
+		</div>
 
 
+		Choose T-Shirt color: 
+		<div class="tshirt-color">
 
-Choose T-Shirt color: <>
-	<div class="tshirt-color">
-	
+		<!-- Choose size -->
+		<form>
+			Choose T-shirt size:<br>
+			<select id="shirtsize" required value="L">
+  			 	<option value="S">Small</option>
+  			 	<option value="L">Large</option>
+  				 <option value="XL">X-Large</option>
+			</select >
+		</form>
 
-
-
-
-<!-- Choose size -->
-<form>
-Choose T-shirt size:<br>
-<select id="shirtsize" required value="L">
-   <option value="S">Small</option>
-   <option value="L">Large</option>
-   <option value="XL">X-Large</option>
-</select >
-</form>
-
-..>
-
-<form>
-Enter your shipping address:<br>
-<input id="shipfirstname"  type="text"   name="shipfirstname"  value="Firt Name"><br>
-
-<!--
-
-<input id="shiplastname"   type="text"   name="shiplastname"   value="Last Name"><br>
-<input id="shipstreetaddr" type="text"   name="shipstreetaddr" value="Address"><br>
-<input id="shipcitytype"   type="text"   name="shipcity"       value="City"><br>
-<input id="shipstate"      type="text"   name="shipstate"      value="State"><br>
-<input id="shipzipcode"    type="text"   name="shipzipcode"   value="Zipcode"><br>
-
--->
-
-<input id="submitbutton"   type="submit" name="submitorder" value="Submit">
-
-</form>
-</section>
+		<form>
+			Enter your shipping address:<br>
+			<input id="shipname"     type="text"   name="shipname"  value="Name"><br>
+			<input id="shipstreetaddr" type="text" name="shipstreetaddr" value="Address"><br>
+			<input id="shipcity"     type="text"   name="shipcity"       value="City"><br>
+			<input id="shipstate"    type="text"   name="shipstate"      value="State"><br>
+			<input id="shipzip"      type="text"   name="shipzip"   value="Zipcode"><br>
+			<input id="submitbutton" type="submit" name="submitorder" value="Submit">
+		</form>
+	</section>
 
 <!-- Get & Display the values of the form -->
 <script>
+	$("#submitbutton").click (
+				function () {
 
+		/* Chosen T-design */
+		var tdesign = "Felix";
 
-/*
-var shirtdesign == $('.shirt-design:checked').val();
-var shirtsize == $("select.shirtsize option:selected").val();
-*/
+		/* Chosen T-Shirt Color */
+		var tcolor = "RED";
 
-var shipfirstname == $("#shipfirstname").text();
-/*
-var shiplastname == $("#shiplastname").text();
-var shipstreetaddr == $("#shipstreetaddr").text();
-var shipcitytype == $("#shipcitytype").text();
-var shipstate == $("#shipstate").text();
+		/* Chosen T-shirt Size - dropdown select */
+		var tsize = $("#shirtsize").val();
 
-<!-- On change, validate the values entered - zipcode, minimum entered fields, minimum # characters to the names, validation of email format etc
--->
-var shipzipcode == $("#shipzipcode").text();
+		/* Get shipping address - input fields */
+		var sname = $("#shipname").val();
+		var sstreetaddr = $("#shipstreetaddr").val();
+		var scity 	= $("#shipcity").val();
+		var sstate = $("#shipstate").val();
+		var szip = $("#shipzip").val();
 
+		alert(
+		"Design: "+tdesign+"<br>"+
+		"Color: "+tcolor+"<br>"+	
+		"Size: "+tsize+"<br>"+
+		"Name: "+ sname + " Address: "+sstreetaddr+ " "+scity+" "+sstate+" "+szip);
 
-/* This will turn the background color of the tshirt to be the chosen color under the design */
+		});
 
-$(document).ready(function(){
-   $(".shirt-design").on({
-	mouseenter: function(){
-	$(this).css("background-color",<chosencolor>);
-	},
-	click: function() {
-	$(this).css("background-color",<setChosencolor>);
-	}
-	});
-</script>
-
-
+	/*  On change, validate the values entered - zipcode, minimum entered fields, 
+		minimum # characters to the names, 
+		validation of email format etc 
+		This will turn the background color of the tshirt to be the chosen color under the design
 	$(document).ready(function(){
-		$("
+ 	  $(".shirt-design").on({
+		mouseenter: function(){
+		$(this).css("background-color",<chosencolor>);
+		},
+		click: function() {
+		$(this).css("background-color",<setChosencolor>);
+		}
+		});
 
-*/
-alert("First Name is " + shipfirstname);
 
+		$(document).ready(function(){
+			$("
 
+	*/
+</script>
 <!--
-
   	 <footer id="contactinfo">
 		<small>&copy; JSK Arts</small><br>
 		<small>Naughty or Nice? Contact us at: 
