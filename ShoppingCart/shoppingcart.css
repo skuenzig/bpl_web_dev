@@ -1,7 +1,7 @@
-﻿/* Halloween style sheet */
+﻿/* Election style sheet */
 <style>
 header {
-	background-color: black;
+	background-color: blue;
 	color; white;
 }
 
@@ -24,7 +24,7 @@ header {
 
 /* Change the link color on hover */
 #navi li a:hover {
-    background-color: orange;
+    background-color: blue;
     color: black;
 }
 
@@ -38,9 +38,9 @@ header {
 }
 
 section {
-	background:orange;
-	background:linear-gradient(orange,black);
-	border: 4px solid orange;
+	background:blue;
+	background:linear-gradient(to right, red,white,blue);
+	border: 4px solid blue;
 	width: 100%;
 	height: 500px;
 	color: white;	
@@ -58,13 +58,13 @@ section {
 }
 
 .radiobutton {
-   border: 10px solid orange;
+   border: 10px solid blue;
    display:inline-block;
    cursor:pointer;
 }
 
 .shirt {
-    border: 10px solid orange;
+    border: 10px solid blue;
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
@@ -75,9 +75,9 @@ section {
 
 }
 
-.felixcat{background-image:url(cat1.jpg);}
-.garfieldcat{background-image:url(cat2.jpg);}
-.kittycat{background-image:url(cat3.jpg);}
+.hillary{background-image:url(hillary.jpg);}
+.donald{background-image:url(donald.jpg);}
+.billthecat{background-image:url(billthecat.png);}
 
 
 img:hover {
@@ -103,6 +103,6 @@ footer {
 }
 
 footer a {
-	color: orange;
+	color: blue;
 }
 </style> 

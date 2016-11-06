@@ -23,31 +23,26 @@
 
 
 		<!-- Choose design  -->
-		Vote for your tshirt:<br>
-  		<div class="tshirt-selector">
+		Vote for your candidate:<br>
+  		<div class="candidate-selector">
 		<div class="radiobutton">
-        		<input id="felixcat" type="radio" name="shirt-design" value="felixcat">
-        		<label class="shirt felixcat" for="felixcat"></label>
+        		<input id="hillary" type="radio" name="chosen-candidate" value="hillary">
+        		<label class="shirt hillary" for="hillary"></label>
 		</div>
 		<div class="radiobutton">
-       			<input id="garfieldcat" type="radio" name="shirt-design" value="garfieldcat" selected>
-        		<label class="shirt garfieldcat" for="garfieldcat"></label>
+       			<input id="donald" type="radio" name="chosen-candidate" value="donald" selected>
+        		<label class="shirt donald" for="donald"></label>
+		</div>
+		<div class="radiobutton">
+       			<input id="billthecat" type="radio" name="chosen-candidate" value="billthecat" selected>
+        		<label class="shirt billthecat" for="billthecat"></label>
 		</div>
 
-		<!-- Choose size -->
-		<form>
-			Choose T-shirt size:<br>
-			<select id="shirtsize" required>
-  			 	<option value="S">Small</option>
-  			 	<option value="L" selected>Large</option>
-  				<option value="XL">X-Large</option>
-			</select >
-		</form>
 
 		<form>
 			Enter your name / email :<br>
-			<input id="custname"     type="text"   name="custname"  value="Name"><br>
-			<input id="custemail" type="text" name="custemail" value="Email"><br>
+			<input id="votername"     type="text"   name="votername"  value="Name"><br>
+			<input id="voteremail" type="text" name="voteremail" value="Email"><br>
 			<input id="submitbutton" type="submit" name="submitorder" value="Submit">
 		</form>
 	</section>
@@ -58,7 +53,7 @@
 	/*  On change, validate the values entered - zipcode, minimum entered fields, 
 		minimum # characters to the names, 
 		validation of email format etc 
-		This will turn the background color of the tshirt to be the chosen color under the design
+		This will turn the background color of the candidate to be the chosen color under the design
 
 
 		$(".image-radio img").click(function(){
@@ -86,7 +81,7 @@
 					  width: '280px'
 					});
 
-				$(this).css("background-image","url('cat3.jpg')");
+				$(this).css("background-image","url('billthecat.jpg')");
 				alert("After the animate and the change of the image");
 /*
 				if ($(this).css("background-color") == "green")
@@ -110,29 +105,25 @@
     	$("#submitbutton").click (
 				function () {
 
-		/* Chosen T-design - cycle thru the radio buttons */
-		var tdesign = "Felix";   /* default value to Felix */
-
-		/* Chosen T-shirt Size - dropdown select */
-		var tsize = $("#shirtsize").val();
+		/* Chosen candidate - cycle thru the radio buttons */
+		var chosencandidate = "Bill The Cat";   /* default value to Felix */
 
 		/* Get shipping address - input fields */
-		var custname = $("#custname").val();
-		var custemail = $("#custemail").val();
+		var votername = $("#votername").val();
+		var voteremail = $("#voteremail").val();
 
 		alert(
-		"Design: "+tdesign+"<br>"+	
-		"Size: "+tsize+"<br>"+
-		"Name: "+ custname + " Email: "+custemail);
+		"Candidate: "+chosencandidate+"<br>"+	
+		"Voter: "+ votername + " Email: "+voteremail);
 	});
 });
 </script>
 <!--
   	 <footer id="contactinfo">
 		<small>&copy; JSK Arts</small><br>
-		<small>Naughty or Nice? Contact us at: 
-		<a href="mailto:santa@northpole.com?subject=Naughty or Nice&body=I want to know how I can migrate from one list to another?">santa@northpole.com</a>
-		North Pole</small>
+		<small>Suggestions? Contact us at: 
+		<a href="mailto:democracy@work.com?subject=Help&body=We need to get back to work">democract@work.com</a>
+		White House</small>
         </footer>
 -->
 </div>
