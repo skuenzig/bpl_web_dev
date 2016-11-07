@@ -1,0 +1,45 @@
+﻿/* Election style sheet */
+<style>
+
+.candidate {
+	border: 3px solid white;
+	width: 30%;
+	padding: 0;
+	margin: 0;
+}
+
+
+#starsstripes {
+ background: url("starsstripes.png") repeat;
+ height: 80px;
+}
+
+body {
+	text-align: center;
+	background:blue;
+	background:linear-gradient(to right, red,white,blue);
+	color: black;	
+}
+
+.candidate img {
+	width: 150px;
+	height: auto;
+}
+
+input {
+	border: black;
+	}
+
+button {
+    background-color: blue;
+    background:linear-gradient(to right, red,blue);
+    border: 3px solid white;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+</style> 
